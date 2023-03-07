@@ -37,13 +37,13 @@
     "bridge": "axelar",
     "enabled": false
   },
-  "534353": {
-    "key": "scross-alpha-testnet",
+  "4002": {
+    "key": "fantom-testnet",
     "covalentKey": "",
-    "name": "Scroll Alpha Testnet",
+    "name": "Fantom Testnet",
     "env": "testnet",
-    "rpc": "own",
-    "bridge": "native",
+    "rpc": "https://rpc.ankr.com/fantom_testnet",
+    "bridge": "axeler",
     "enabled": false
   }
 }

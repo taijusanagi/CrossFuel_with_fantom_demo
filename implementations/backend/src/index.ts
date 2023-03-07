@@ -46,8 +46,8 @@ import { ChainId, isChainId } from "../../common/types/ChainId";
 const getDefenderSignerByChainId = (chainId: ChainId) => {
   const credentials =
     chainId == "5"
-      ? { apiKey: process.env.DEFENDER_GOERLI_PAI_KEY || "", apiSecret: process.env.DEFENDER_GOERLI_SECRET_KEY || "" }
-      : { apiKey: process.env.DEFENDER_MUMBAI_PAI_KEY || "", apiSecret: process.env.DEFENDER_MUMBAI_SECRET_KEY || "" };
+      ? { apiKey: process.env.DEFENDER_GOERLI_API_KEY || "", apiSecret: process.env.DEFENDER_GOERLI_SECRET_KEY || "" }
+      : { apiKey: process.env.DEFENDER_MUMBAI_API_KEY || "", apiSecret: process.env.DEFENDER_MUMBAI_SECRET_KEY || "" };
   const provider = new DefenderRelayProvider(credentials);
   const signer = new DefenderRelaySigner(credentials, provider, { speed: "fast" });
   return { provider, signer };
