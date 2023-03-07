@@ -114,7 +114,7 @@ export class UserOpMethodHandler {
       maxFeePerGas: 0,
       maxPriorityFeePerGas: 0,
       preVerificationGas: 0,
-      verificationGasLimit: 10e6,
+      verificationGasLimit: 5e6,
     };
 
     // todo: checks the existence of parameters, but since we hexlify the inputs, it fails to validate

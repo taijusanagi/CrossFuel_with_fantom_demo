@@ -42,7 +42,7 @@
     "covalentKey": "",
     "name": "Fantom Testnet",
     "env": "testnet",
-    "rpc": "https://rpc.ankr.com/fantom_testnet",
+    "rpc": "https://nd-822-109-589.p2pify.com/79719e477768ceaba74825be9c8c9fff",
     "bridge": "axeler",
     "enabled": false
   }

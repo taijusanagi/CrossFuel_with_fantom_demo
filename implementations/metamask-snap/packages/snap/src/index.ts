@@ -44,6 +44,7 @@ const bundlerUrls = {
   '5': 'https://node.stackup.sh/v1/rpc/d7567b6a3d8c1d90df52de74c0b310e08dcb0a538f264ac162090c046613931c',
   '80001':
     'https://node.stackup.sh/v1/rpc/bdaf63d7cd0180897fc9ec780edd1d408e4c406aaab1763a73b21b0b35ae4af9',
+  '4002': 'http://localhost:3000/rpc',
 };
 
 let currentChainId: ChainId | null;
@@ -70,8 +71,15 @@ const getConnectedChainId = async (): Promise<ChainId> => {
 const getJsonPRCProviderByChainId = (chainId: ChainId) => {
   console.log(configJson[chainId]);
   console.log(infuraProjectId);
+
+  if (chainId !== '4002') {
+    return new ethers.providers.JsonRpcProvider(
+      `https://${configJson[chainId].key}.infura.io/v3/${infuraProjectId}`,
+    );
+  }
+  // this is fantom integration
   return new ethers.providers.JsonRpcProvider(
-    `https://${configJson[chainId].key}.infura.io/v3/${infuraProjectId}`,
+    `https://rpc.ankr.com/fantom_testnet`,
   );
 };
 
@@ -525,6 +533,7 @@ export const onRpcRequest: OnRpcRequestHandler = async ({
         console.log(
           '8. After the gas payment transaction is sent, send the execute transaction to the bundler.',
         );
+        console.log(resolvedExecuteUserOp2);
         const sendExecuteUserOpToBundlerResult =
           await executeChainBundler.sendUserOpToBundler(resolvedExecuteUserOp2);
 
