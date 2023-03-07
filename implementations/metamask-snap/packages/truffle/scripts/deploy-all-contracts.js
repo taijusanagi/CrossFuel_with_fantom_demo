@@ -15,7 +15,7 @@ const path = require('path');
 require('dotenv').config({});
 
 const mnemonicPhrase = process.env.MNEMONIC_PHRASE;
-
+const HDWalletProvider = require('@truffle/hdwallet-provider');
 // @dev
 // This is a custom multichain deployer that utilizes a create2 factory.
 // We have added custom logic to enable deployment to multiple chains simultaneously,
@@ -34,15 +34,23 @@ const main = async () => {
   let mockSBTClaim;
 
   try {
-    for (const { key: network } of Object.values(networksJson)) {
+    for (const { key: network, rpc } of Object.values(networksJson)) {
       console.log(`====== ${network} ======`);
 
+      console.log(rpc);
       // @dev
       // This requires deploying with creat2 to Multichain, so Truffle migrate cannot be used directly.
       // However, we attempt to create the same environment as Truffle.
-      const provider = new ethers.providers.Web3Provider(
-        truffle.networks[network].provider(),
-      );
+      let provider;
+      if (rpc === 'infura') {
+        provider = new ethers.providers.Web3Provider(
+          truffle.networks[network].provider(),
+        );
+      } else {
+        provider = new ethers.providers.Web3Provider(
+          new HDWalletProvider(mnemonicPhrase, rpc),
+        );
+      }
 
       const signer =
         ethers.Wallet.fromMnemonic(mnemonicPhrase).connect(provider);

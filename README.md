@@ -1,9 +1,15 @@
 # CrossFuel With Fantom
 
-The main development of this project occurred during ETHDenver, and due to the similar time frame of the hackathon, we incorporated Fantom integration by reusing existing components.
-
 CrossFuel is a payment system that simplifies gas fees for dApps on different blockchains using Account Abstraction.
 It eliminates the need to swap or bridge tokens, making transactions across multiple chains effortless.
+
+## Newly Developped Function for Fantom Hackathon
+
+The bulk of this project's development took place during ETHDenver, where the similar time frame of the hackathon allowed for the incorporation of Fantom integration by reusing existing components.
+
+Please note this point when evaluating/judging.
+
+The new functions are as follows.
 
 ![banner](./docs/banner_wide.png)
 

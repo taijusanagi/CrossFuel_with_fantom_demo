@@ -37,13 +37,13 @@
     "bridge": "axelar",
     "enabled": false
   },
-  "534353": {
-    "key": "scross-alpha-testnet",
+  "4002": {
+    "key": "fantom-testnet",
     "covalentKey": "",
-    "name": "Scroll Alpha Testnet",
+    "name": "Fantom Testnet",
     "env": "testnet",
-    "rpc": "own",
-    "bridge": "native",
+    "rpc": "https://nd-822-109-589.p2pify.com/79719e477768ceaba74825be9c8c9fff",
+    "bridge": "axeler",
     "enabled": false
   }
 }

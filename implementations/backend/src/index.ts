@@ -46,8 +46,13 @@ import { ChainId, isChainId } from "../../common/types/ChainId";
 const getDefenderSignerByChainId = (chainId: ChainId) => {
   const credentials =
     chainId == "5"
-      ? { apiKey: process.env.DEFENDER_GOERLI_PAI_KEY || "", apiSecret: process.env.DEFENDER_GOERLI_SECRET_KEY || "" }
-      : { apiKey: process.env.DEFENDER_MUMBAI_PAI_KEY || "", apiSecret: process.env.DEFENDER_MUMBAI_SECRET_KEY || "" };
+      ? { apiKey: process.env.DEFENDER_GOERLI_API_KEY || "", apiSecret: process.env.DEFENDER_GOERLI_SECRET_KEY || "" }
+      : chainId == "80001"
+      ? { apiKey: process.env.DEFENDER_MUMBAI_API_KEY || "", apiSecret: process.env.DEFENDER_MUMBAI_SECRET_KEY || "" }
+      : { apiKey: process.env.DEFENDER_FANTOM_API_KEY || "", apiSecret: process.env.DEFENDER_FANTOM_SECRET_KEY || "" };
+
+  console.log("credentials", credentials);
+
   const provider = new DefenderRelayProvider(credentials);
   const signer = new DefenderRelaySigner(credentials, provider, { speed: "fast" });
   return { provider, signer };
@@ -166,6 +171,7 @@ app.post("/sign", async (req: Request, res: Response) => {
     ]);
     res.send({ paymasterAndData });
   } else {
+    console.log("start sign in with defender");
     // @dev: secondly, paymaster sign user operation with user signature, then user sign with user operation with paymaster signature
     const paymasterAndData = await paymasterContract
       .getHash(userOp, validUntil, validAfter)
@@ -180,6 +186,7 @@ app.post("/sign", async (req: Request, res: Response) => {
           parsePaymasterAndDataWithoutAddressAndSignature,
           signature,
         ]);
+        console.log("sign ok", paymasterAndData);
         return paymasterAndData;
       })
       .catch((e: Error) => {

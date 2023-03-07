@@ -273,7 +273,7 @@ const Index = () => {
     console.log('pass flask test');
     const relead = (chainId: string) => {
       console.log('relead');
-      if (chainId === '80001') {
+      if (chainId === '4002') {
         console.log('chain id if fine');
         setIsModalDisplayed(false);
         setConnectedNetwork(networks[chainId].name);
@@ -623,7 +623,7 @@ const Index = () => {
       </CardContainer>
       {isModalDisplayed && (
         <Modal title="Network Error">
-          The current network is not supported. Please Switch to Polygon Mumbai.
+          The current network is not supported. Please Switch to Fantom Testnet.
           <ModalSubTitle>Note:</ModalSubTitle>
           <NetworkNames>
             <>Contracts are deployed</>
@@ -635,8 +635,8 @@ const Index = () => {
             <br />
             <br />
             <>
-              However, only gas payment on Goerli and execution on Polygon
-              Mumbai have been tested sufficiently for the demo.
+              However, only gas payment on Goerli and execution on Fantom
+              Testnet have been tested sufficiently for the demo.
             </>
           </NetworkNames>
         </Modal>
