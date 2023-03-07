@@ -1,4 +1,6 @@
-# CrossFuel
+# CrossFuel With Fantom
+
+The main development of this project occurred during ETHDenver, and due to the similar time frame of the hackathon, we incorporated Fantom integration by reusing existing components.
 
 CrossFuel is a payment system that simplifies gas fees for dApps on different blockchains using Account Abstraction.
 It eliminates the need to swap or bridge tokens, making transactions across multiple chains effortless.
@@ -9,11 +11,11 @@ It eliminates the need to swap or bridge tokens, making transactions across mult
 
 ### Live Demo
 
-https://cross-fuel.vercel.app/
+https://cross-fuel-with-fantom.vercel.app/
 
 ### Demo Video
 
-https://studio.youtube.com/video/pMYqMyQt7qQ/edit
+TBD
 
 ## How It Works
 
@@ -37,61 +39,29 @@ By working together, these services provide a seamless and secure user experienc
 
 Metamask Snap is an extension feature of Metamask that adds the Account Abstraction function, which was previously cumbersome to use and required multiple signatures, making it difficult to comprehend the transaction process. By automating the Account Abstraction signature and providing a transaction simulator for improved security, Metamask Snap simplifies and enhances the user experience.
 
-https://github.com/taijusanagi/CrossFuel/blob/main/docs/metamask-snap.md
-
 ### Infura
 
 Our team utilizes Infura, a multichain node service, for deploying multichain contracts, including the Account Abstraction infrastructure contract, which we are deploying to each chain. Meanwhile, Truffle, a core development tool, provides a starter kit for Metamask Snap and smart contract.
-
-https://github.com/taijusanagi/CrossFuel/blob/main/docs/infura.md
 
 ### Defender
 
 Defender is an automated tool that verifies the signature within the paymaster contract, checks the paymaster deposit balance, and facilitates any necessary fund transfers. CrossFuel has chosen Defender because it requires a stable infrastructure for signing and health checks.
 
-https://github.com/taijusanagi/CrossFuel/blob/main/docs/defender.md
-
 ### Axelar
 
 Axelar Network is a crucial component of our cross-chain gas payment service. In the event of insufficient funds, we leverage the cross-chain bridge to transfer funds from a chain with a surplus. Additionally, we utilize Squid, the cross-chain swap and liquidity routing protocol, on the Axelar Network to facilitate our operations.
-
-https://github.com/taijusanagi/CrossFuel/blob/main/docs/axelar.md
 
 ### Tenderly
 
 Communicating the inner workings of Account Abstraction to users is challenging. To enhance the user experience, we're using Tenderly to simulate transaction results. This allows users to review the transaction outcome before submitting it to the bundler, thereby ensuring the security of the process. This security feature is critical in making the Account Abstraction wallet widely accepted.
 
-https://github.com/taijusanagi/CrossFuel/blob/main/docs/tenderly.md
-
 ### Covalent
 
 In our data retrieval process across multiple chains, Covalent plays a pivotal role. On the frontend, we gather supported tokens across various chains, while on the backend, we use Covalent to obtain balance data to ensure validation prior to conducting swaps and cross-chain bridge transfers.
 
-https://github.com/taijusanagi/CrossFuel/blob/main/docs/covalent.md
-
 ### Truffle Snaps Box
 
 We utilized Truffle Snaps Box to create a Metamask boilerplate
-
-https://github.com/taijusanagi/CrossFuel/blob/main/docs/truffle-snaps-box.md
-
-### Polygon as Payment Layer
-
-Including Polygon in our platform is crucial as it has one of the largest user bases among blockchain networks. With Polygon integrated, users can pay gas fees in Polygon for other chains such as zkEVM, making it a convenient payment layer for many users.
-
-https://github.com/taijusanagi/CrossFuel/blob/main/docs/polygon.md
-
-### Expand to L2 with Scroll
-
-We are planning to incorporate our Account Abstraction infrastructure onto Scroll. This is because Scroll is transitioning to zk EVM, which lacks native support for Account Abstraction. By deploying our infrastructure on Scroll, we can bridge this gap.
-
-https://github.com/taijusanagi/CrossFuel/blob/main/docs/scroll.md
-
-### 1inchi for the Swap Integration
-
-We are utilizing 1inch for the swap and attempting to incorporate 1inch swap into our platform. However, since 1inch does not support testnet, we are testing its functionality in a separate file and designing its architecture on testnet.
-
-https://github.com/taijusanagi/CrossFuel/blob/main/docs/one-inch.md
 
 ## Development
 
@@ -117,12 +87,12 @@ yarn start
 
 ### Backend
 
-https://cross-fuel-backend.onrender.com/
+https://cross-fuel-fantom-backend.onrender.com/
 
 ### Frontend
 
-https://cross-fuel.vercel.app/
+https://cross-fuel-fantom-.vercel.app/
 
 ### Metamask Snap
 
-https://www.npmjs.com/package/crossfuel-snap
+https://www.npmjs.com/package/crossfuel-snap-with-fantom
