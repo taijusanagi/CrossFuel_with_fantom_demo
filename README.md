@@ -5,7 +5,7 @@ It eliminates the need to swap or bridge tokens, making transactions across mult
 
 ## Newly Developped Function for Fantom Hackathon
 
-The bulk of this project's development took place during ETHDenver, where the similar time frame of the hackathon allowed for the incorporation of Fantom integration by reusing existing components.
+This project is brand new for this hackathon period, but most of its development actually happened during ETHDenver. The similar time frame of ETHDenver's hackathon gave us the opportunity to integrate Fantom into the project.
 
 Please note this point when evaluating/judging.
 
