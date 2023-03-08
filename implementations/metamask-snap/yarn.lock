@@ -5224,6 +5224,48 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@resolver-engine/core@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "@resolver-engine/core@npm:0.2.1"
+  dependencies:
+    debug: ^3.1.0
+    request: ^2.85.0
+  checksum: 2c6884c670382541c0d33669d63bdc44359c79b37feba84260fad2d0227e0af32000ae873b5f74c2c456be1ece564ba4468c8ba285a5b40ee5438413c2accec1
+  languageName: node
+  linkType: hard
+
+"@resolver-engine/fs@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "@resolver-engine/fs@npm:0.2.1"
+  dependencies:
+    "@resolver-engine/core": ^0.2.1
+    debug: ^3.1.0
+  checksum: 1f76a52311d64c6352827101dd7e4d603e1fed700ec1ea14bc43f2d9ea46b0563dca5aada74a1d49329629e53011f40f46dce5cdd6009bbf6af2143644135f25
+  languageName: node
+  linkType: hard
+
+"@resolver-engine/imports-fs@npm:^0.2.2":
+  version: 0.2.2
+  resolution: "@resolver-engine/imports-fs@npm:0.2.2"
+  dependencies:
+    "@resolver-engine/fs": ^0.2.1
+    "@resolver-engine/imports": ^0.2.2
+    debug: ^3.1.0
+  checksum: 9b53278cc9e42c3d3c878fbc48351d654d065d60f44be6d621b279d01ef16137805dbf025352f37ffe2541e2c7e4bd3a0ae4703cbf2b830ab3c2efbe5ce49d73
+  languageName: node
+  linkType: hard
+
+"@resolver-engine/imports@npm:^0.2.2":
+  version: 0.2.2
+  resolution: "@resolver-engine/imports@npm:0.2.2"
+  dependencies:
+    "@resolver-engine/core": ^0.2.1
+    debug: ^3.1.0
+    hosted-git-info: ^2.6.0
+  checksum: 8baa26e3294548585501311fa9aaa674364e0f75bb2600b555009fe9f4657c4aa403959983fa0f103028fc8fe4b0e37afd29061e327f27ec4a7c064a9d15f462
+  languageName: node
+  linkType: hard
+
 "@scure/base@npm:^1.0.0, @scure/base@npm:^1.1.1, @scure/base@npm:~1.1.0":
   version: 1.1.1
   resolution: "@scure/base@npm:1.1.1"
@@ -5334,6 +5376,15 @@ __metadata:
     escape-string-regexp: ^2.0.0
     lodash.deburr: ^4.1.0
   checksum: f4a0fdf710adcad901bdd30dc02acbb33d464d7945fb2d6dc8130cf8e5e1151d66e2b9b20633f4c27c014ddba511a0a976d74304e4cbfacb8044d3c6f052d547
+  languageName: node
+  linkType: hard
+
+"@solidity-parser/parser@npm:^0.14.1":
+  version: 0.14.5
+  resolution: "@solidity-parser/parser@npm:0.14.5"
+  dependencies:
+    antlr4ts: ^0.5.0-alpha.4
+  checksum: 9e85a0d4f8a05a11db6022444b70b2f353e2358467b1cce44cdda703ae1e3c7337e1b8cbc2eec8e14a8f34f9c60b42f325e5fe9b3c934cc980e35091e292d7ee
   languageName: node
   linkType: hard
 
@@ -7837,6 +7888,15 @@ __metadata:
   version: 5.2.0
   resolution: "ansi-styles@npm:5.2.0"
   checksum: d7f4e97ce0623aea6bc0d90dcd28881ee04cba06c570b97fd3391bd7a268eedfd9d5e2dd4fdcbdd82b8105df5faf6f24aaedc08eaf3da898e702db5948f63469
+  languageName: node
+  linkType: hard
+
+"antlr4ts@npm:^0.5.0-alpha.4":
+  version: 0.5.0-dev
+  resolution: "antlr4ts@npm:0.5.0-dev"
+  dependencies:
+    source-map-support: ^0.5.16
+  checksum: 640dae2229124372b0329315e9614ae983bb80b1af237d8c0b3e90a2d85fb534e851c51d65d1897c92b36d27851d041ad8d95aab44af19cf7355b3ad11a3ddbf
   languageName: node
   linkType: hard
 
@@ -13370,6 +13430,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fs-extra@npm:^8.1.0":
+  version: 8.1.0
+  resolution: "fs-extra@npm:8.1.0"
+  dependencies:
+    graceful-fs: ^4.2.0
+    jsonfile: ^4.0.0
+    universalify: ^0.1.0
+  checksum: bf44f0e6cea59d5ce071bba4c43ca76d216f89e402dc6285c128abc0902e9b8525135aa808adad72c9d5d218e9f4bcc63962815529ff2f684ad532172a284880
+  languageName: node
+  linkType: hard
+
 "fs-extra@npm:^9.0.0, fs-extra@npm:^9.1.0":
   version: 9.1.0
   resolution: "fs-extra@npm:9.1.0"
@@ -14651,6 +14722,13 @@ __metadata:
   dependencies:
     react-is: ^16.7.0
   checksum: b1538270429b13901ee586aa44f4cc3ecd8831c061d06cb8322e50ea17b3f5ce4d0e2e66394761e6c8e152cd8c34fb3b4b690116c6ce2bd45b18c746516cb9e8
+  languageName: node
+  linkType: hard
+
+"hosted-git-info@npm:^2.6.0":
+  version: 2.8.9
+  resolution: "hosted-git-info@npm:2.8.9"
+  checksum: c955394bdab888a1e9bb10eb33029e0f7ce5a2ac7b3f158099dc8c486c99e73809dca609f5694b223920ca2174db33d32b12f9a2a47141dc59607c29da5a62dd
   languageName: node
   linkType: hard
 
@@ -16620,6 +16698,13 @@ __metadata:
   version: 4.5.0
   resolution: "lodash.uniq@npm:4.5.0"
   checksum: a4779b57a8d0f3c441af13d9afe7ecff22dd1b8ce1129849f71d9bbc8e8ee4e46dfb4b7c28f7ad3d67481edd6e51126e4e2a6ee276e25906d10f7140187c392d
+  languageName: node
+  linkType: hard
+
+"lodash@npm:4.17.15":
+  version: 4.17.15
+  resolution: "lodash@npm:4.17.15"
+  checksum: bb689bc88c0645b7002a045cdbe32292ae51d5d2a6f6a5272cb5a5ace9b06700bb3d30c6be6ecfae9a70f9c943f60e90765033fc7ff706cf9219374eeda314ad
   languageName: node
   linkType: hard
 
@@ -21510,7 +21595,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:~0.5.20":
+"source-map-support@npm:^0.5.16, source-map-support@npm:~0.5.20":
   version: 0.5.21
   resolution: "source-map-support@npm:0.5.21"
   dependencies:
@@ -22491,6 +22576,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"truffle-flatten@npm:^1.0.8":
+  version: 1.0.8
+  resolution: "truffle-flatten@npm:1.0.8"
+  dependencies:
+    fs-extra: ^8.1.0
+    lodash: 4.17.15
+    truffle-flattener: ^1.4.2
+  checksum: 98880ea296ca106ed1d89100c732127a4cdaaa0ada9961e898cc3685dee94fd0f641b18cc9c70eea904aad8467511056ca6b3ac84c040f67a5705018022070fa
+  languageName: node
+  linkType: hard
+
+"truffle-flattener@npm:^1.4.2":
+  version: 1.6.0
+  resolution: "truffle-flattener@npm:1.6.0"
+  dependencies:
+    "@resolver-engine/imports-fs": ^0.2.2
+    "@solidity-parser/parser": ^0.14.1
+    find-up: ^2.1.0
+    mkdirp: ^1.0.4
+    tsort: 0.0.1
+  bin:
+    truffle-flattener: index.js
+  checksum: 54670aa558d648b46e1bb992e6c672651fd2e25089cae8f1b09f762e36fd470304c5661ad3b20cc0d8e83f3ab5449effe0086c5b97a6537c5aa900ab00f27ad3
+  languageName: node
+  linkType: hard
+
 "truffle-plugin-verify@npm:^0.6.1":
   version: 0.6.1
   resolution: "truffle-plugin-verify@npm:0.6.1"
@@ -22537,6 +22648,7 @@ __metadata:
     dotenv: ^16.0.3
     ganache: ^7.5.0
     truffle: ^5.7.8
+    truffle-flatten: ^1.0.8
     truffle-plugin-verify: ^0.6.1
     ts-node: ^10.9.1
     typescipt: ^1.0.0
@@ -22611,6 +22723,13 @@ __metadata:
   version: 2.4.0
   resolution: "tslib@npm:2.4.0"
   checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
+  languageName: node
+  linkType: hard
+
+"tsort@npm:0.0.1":
+  version: 0.0.1
+  resolution: "tsort@npm:0.0.1"
+  checksum: 581566c248690b9ea7e431e1545affb3d2cab0f5dcd0e45ddef815dfaec4864cb5f0cfd8072924dedbc0de9585ff07e3e65db60f14fab4123737b9bb6e72eacc
   languageName: node
   linkType: hard
 

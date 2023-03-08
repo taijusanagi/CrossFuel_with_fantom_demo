@@ -23,6 +23,7 @@
     "dotenv": "^16.0.3",
     "ganache": "^7.5.0",
     "truffle": "^5.7.8",
+    "truffle-flatten": "^1.0.8",
     "truffle-plugin-verify": "^0.6.1",
     "ts-node": "^10.9.1",
     "typescipt": "^1.0.0"
