@@ -45,5 +45,14 @@
     "rpc": "https://nd-822-109-589.p2pify.com/79719e477768ceaba74825be9c8c9fff",
     "bridge": "axeler",
     "enabled": false
+  },
+  "250": {
+    "key": "fantom",
+    "covalentKey": "",
+    "name": "Fantom Opera",
+    "env": "mainnet",
+    "rpc": "https://rpc.ftm.tools/",
+    "bridge": "axeler",
+    "enabled": false
   }
 }

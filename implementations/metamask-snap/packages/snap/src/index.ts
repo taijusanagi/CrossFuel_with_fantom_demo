@@ -38,7 +38,7 @@ import { getGasFee } from './utils/getGasFee';
 
 // http://localhost:8001
 // https://cross-fuel-backend.onrender.com
-const backendUrl = 'https://cross-fuel-backend.onrender.com';
+const backendUrl = 'https://cross-fuel-with-fantom-demo-backend.onrender.com';
 
 const bundlerUrls = {
   '5': 'https://node.stackup.sh/v1/rpc/d7567b6a3d8c1d90df52de74c0b310e08dcb0a538f264ac162090c046613931c',

@@ -81,6 +81,12 @@ module.exports = {
       },
       network_id: '*',
     },
+    fantom: {
+      provider: function () {
+        return new HDWalletProvider(mnemonic, 'https://rpc.ftm.tools/');
+      },
+      network_id: '*',
+    },
     // ...Object.values(networkJson)
     //   .filter(({ rpc }) => rpc === 'infura')
     //   .map(({ key }) => getInfuraNetwork(key)),
