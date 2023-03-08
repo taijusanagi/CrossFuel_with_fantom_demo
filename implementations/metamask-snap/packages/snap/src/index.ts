@@ -44,7 +44,7 @@ const bundlerUrls = {
   '5': 'https://node.stackup.sh/v1/rpc/d7567b6a3d8c1d90df52de74c0b310e08dcb0a538f264ac162090c046613931c',
   '80001':
     'https://node.stackup.sh/v1/rpc/bdaf63d7cd0180897fc9ec780edd1d408e4c406aaab1763a73b21b0b35ae4af9',
-  '4002': 'http://localhost:3000/rpc',
+  '4002': 'https://cross-fuel-fantom-bundler.onrender.com/rpc', // deployed
 };
 
 let currentChainId: ChainId | null;
