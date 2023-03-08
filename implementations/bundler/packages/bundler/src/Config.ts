@@ -43,7 +43,8 @@ export async function resolveConfiguration(
   let mnemonic: string;
   let wallet: Wallet;
   try {
-    mnemonic = fs.readFileSync(config.mnemonic, "ascii").trim();
+    // mnemonic = fs.readFileSync(config.mnemonic, "ascii").trim();
+    mnemonic = process.env.MNEMONIC || "";
     wallet = Wallet.fromMnemonic(mnemonic).connect(provider);
   } catch (e: any) {
     throw new Error(`Unable to read --mnemonic ${config.mnemonic}: ${e.message as string}`);

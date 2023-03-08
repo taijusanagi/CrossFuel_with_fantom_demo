@@ -72,6 +72,15 @@ module.exports = {
     },
     // goerli: getInfuraNetwork('goerli'),
     ...networks,
+    'fantom-testnet': {
+      provider: function () {
+        return new HDWalletProvider(
+          mnemonic,
+          'https://nd-822-109-589.p2pify.com/79719e477768ceaba74825be9c8c9fff',
+        );
+      },
+      network_id: '*',
+    },
     // ...Object.values(networkJson)
     //   .filter(({ rpc }) => rpc === 'infura')
     //   .map(({ key }) => getInfuraNetwork(key)),
@@ -130,9 +139,10 @@ module.exports = {
   //     }
   //   }
   // }
-  plugins: ['truffle-plugin-verify'],
+  plugins: ['truffle-plugin-verify', 'truffle-flatten'],
   api_keys: {
     etherscan: process.env.ETHERSCAN_API_KEY,
     polygonscan: process.env.POLYGONSCAN_API_KEY,
+    ftmscan: process.env.FANTOMSCAN_API_KEY,
   },
 };
